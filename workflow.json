@@ -1,0 +1,978 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "LinkedIn Carousel Automation - Enterprise Storage News",
+        "formDescription": "Generate AI-powered LinkedIn carousel posts from enterprise storage news",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Research Subject",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Lookback Period (Days)",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "1"
+                  },
+                  {
+                    "option": "2"
+                  },
+                  {
+                    "option": "3"
+                  },
+                  {
+                    "option": "4"
+                  },
+                  {
+                    "option": "5"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Messaging Focus",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "buttonLabel": "Generate Carousel"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -960,
+        820
+      ],
+      "id": "e4c86ee7-e505-4b33-bc77-e71523ce86e4",
+      "name": "On form submission",
+      "webhookId": "66203819-3bbd-4b53-b06f-73184ce2ce54"
+    },
+    {
+      "parameters": {
+        "url": "https://www.storagereview.com/feed",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        60
+      ],
+      "id": "76eb7ead-77f5-457d-84c7-f165160f4ab3",
+      "name": "RSS feed"
+    },
+    {
+      "parameters": {
+        "url": "https://blocksandfiles.com/feed/",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        240
+      ],
+      "id": "b75fc2a5-fa90-49a7-9cae-ea482522c663",
+      "name": "RSS feed1"
+    },
+    {
+      "parameters": {
+        "url": "https://www.enterprisestorageforum.com/feed/",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        420
+      ],
+      "id": "956911d9-d4e3-4fee-a285-f5a34f9a43cb",
+      "name": "RSS feed2"
+    },
+    {
+      "parameters": {
+        "url": "https://www.theregister.com/software/headlines.atom",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        600
+      ],
+      "id": "136134b0-1c57-49f1-87fd-a8f27c805a7d",
+      "name": "RSS feed3"
+    },
+    {
+      "parameters": {
+        "url": "https://www.infostor.com/feed/",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        780
+      ],
+      "id": "c6e2d283-cf22-4b2c-8419-6aaaac588c4f",
+      "name": "RSS feed4"
+    },
+    {
+      "parameters": {
+        "url": "https://www.computerweekly.com/rss/Storage.xml",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        960
+      ],
+      "id": "01999596-33eb-4579-a169-706aad1f1a08",
+      "name": "RSS feed5"
+    },
+    {
+      "parameters": {
+        "url": "https://siliconangle.com/category/data-storage/feed/",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        1140
+      ],
+      "id": "9e95415f-aeaa-41b0-b97b-b647a7e793b8",
+      "name": "RSS feed6"
+    },
+    {
+      "parameters": {
+        "url": "https://www.datacenterknowledge.com/rss.xml",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        1320
+      ],
+      "id": "80ac394d-a5c4-4da6-bef2-76365be76a3a",
+      "name": "RSS feed7"
+    },
+    {
+      "parameters": {
+        "url": "https://www.storagenewsletter.com/feed/",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        1500
+      ],
+      "id": "a96ed08b-da00-4bfd-986f-63c8263a20ee",
+      "name": "RSS feed8"
+    },
+    {
+      "parameters": {
+        "url": "https://www.zdnet.com/topic/storage/rss.xml",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -160,
+        1680
+      ],
+      "id": "a5d5541f-a218-47e4-983f-1bf6adf5ca34",
+      "name": "RSS feed9"
+    },
+    {
+      "parameters": {
+        "numberInputs": 10
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        560,
+        720
+      ],
+      "id": "9ec7768d-b891-4e63-8bdb-ca9b6e271410",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        840,
+        860
+      ],
+      "id": "11af4e92-c516-4a2e-a9e6-87d78bab8022",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get all articles from previous Code node\nconst allArticles = $input.all();\n\n// Format articles as a readable string\nconst articlesText = allArticles.map((item, index) => {\n  return `Article ${index + 1}:\nTitle: ${item.json.title}\nDescription: ${item.json.description}\nLink: ${item.json.link}\nDate: ${item.json.pubDate}\n---`;\n}).join('\\n\\n');\n\n// Return as single item\nreturn [{\n  json: {\n    articlesText: articlesText,\n    totalArticles: allArticles.length,\n    messagingFocus: $('On form submission').first().json['Messaging Focus'],\n    researchSubject: $('On form submission').first().json['Research Subject']\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1420,
+        860
+      ],
+      "id": "c427104a-bb54-4a38-9455-3a1225c6e1ce",
+      "name": "Combine Articals"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get form inputs\nconst lookbackDays = $('On form submission').first().json['Lookback Period (Days)'];\nconst researchSubject = $('On form submission').first().json['Research Subject'];\n\nconst cutoffDate = new Date();\ncutoffDate.setDate(cutoffDate.getDate() - lookbackDays);\n\nconsole.log('Lookback days:', lookbackDays);\nconsole.log('Research Subject:', researchSubject);\nconsole.log('Cutoff date:', cutoffDate.toISOString());\n\nconst allArticles = [];\n\n// Access the aggregated data structure\nconst aggregateData = $input.first().json.data;\n\nconsole.log('Aggregate data items:', aggregateData.length);\n\n// Loop through each aggregated item\nfor (const aggregateItem of aggregateData) {\n  // Get the actual RSS XML data\n  const xmlString = aggregateItem.data;\n  \n  if (typeof xmlString !== 'string') {\n    console.log('Skipping - not a string');\n    continue;\n  }\n  \n  // Try both RSS and Atom formats\n  const itemRegex = /<item>([\\s\\S]*?)<\\/item>/g;\n  const entryRegex = /<entry>([\\s\\S]*?)<\\/entry>/g;\n  \n  const items = xmlString.match(itemRegex) || xmlString.match(entryRegex) || [];\n  \n  console.log('Articles found in this feed:', items.length);\n  \n  for (const itemXml of items) {\n    // Extract fields\n    const titleMatch = itemXml.match(/<title[^>]*>(.*?)<\\/title>/s);\n    const linkMatch = itemXml.match(/<link[^>]*>([^<]*)<\\/link>/s) || itemXml.match(/href=\"([^\"]+)\"/);\n    const descMatch = itemXml.match(/<description[^>]*>(.*?)<\\/description>/s) || itemXml.match(/<summary[^>]*>(.*?)<\\/summary>/s);\n    const dateMatch = itemXml.match(/<pubDate>(.*?)<\\/pubDate>/s) || itemXml.match(/<published>(.*?)<\\/published>/s) || itemXml.match(/<updated>(.*?)<\\/updated>/s);\n    \n    const title = titleMatch ? titleMatch[1] : '';\n    const link = linkMatch ? linkMatch[1] : '';\n    const description = descMatch ? descMatch[1] : '';\n    const pubDate = dateMatch ? dateMatch[1] : '';\n    \n    if (!title) continue;\n    \n    // Parse and validate date\n    let articleDate = new Date(pubDate);\n    \n    // If date is invalid, skip this article\n    if (isNaN(articleDate.getTime())) {\n      console.log('Invalid date, skipping article:', title.substring(0, 50));\n      continue;\n    }\n    \n    // Clean up title and description\n    const cleanTitle = title.replace(/<!\\[CDATA\\[(.*?)\\]\\]>/g, '$1').replace(/<[^>]*>/g, '').trim();\n    const cleanDescription = description.replace(/<!\\[CDATA\\[(.*?)\\]\\]>/g, '$1').replace(/<[^>]*>/g, '').trim().substring(0, 500);\n    \n    // Filter by date AND research subject\n    const dateMatches = articleDate >= cutoffDate;\n    \n    // Check if research subject appears in title or description (case-insensitive)\n    const searchTerms = researchSubject.toLowerCase().split(/\\s+/); // Split into words\n    const titleLower = cleanTitle.toLowerCase();\n    const descLower = cleanDescription.toLowerCase();\n    \n    // Article matches if ANY search term appears in title or description\n    const subjectMatches = searchTerms.some(term => \n      titleLower.includes(term) || descLower.includes(term)\n    );\n    \n    if (dateMatches && subjectMatches) {\n      allArticles.push({\n        title: cleanTitle,\n        link: link.trim(),\n        description: cleanDescription,\n        pubDate: pubDate,\n        articleDate: articleDate.toISOString()\n      });\n    }\n  }\n}\n\nconsole.log('Total articles after filters:', allArticles.length);\nconsole.log('Articles within last', lookbackDays, 'days matching', researchSubject);\n\nif (allArticles.length === 0) {\n  return [{\n    json: {\n      error: \"No articles found matching criteria\",\n      lookbackDays: lookbackDays,\n      researchSubject: researchSubject,\n      cutoffDate: cutoffDate.toISOString(),\n      suggestion: \"Try increasing lookback days or using broader search terms\"\n    }\n  }];\n}\n\n// Sort by date (newest first)\nallArticles.sort((a, b) => new Date(b.articleDate) - new Date(a.articleDate));\n\n// Limit to 50 articles\nconst limitedArticles = allArticles.slice(0, 50);\n\nreturn limitedArticles.map(article => ({ json: article }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1140,
+        860
+      ],
+      "id": "8ff24e82-ad5b-437b-a988-f6956f983065",
+      "name": "Artical by Date"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "meta-llama/llama-3-8b-instruct",
+          "mode": "id"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are an expert at analyzing enterprise storage industry news and identifying key trends, themes, and pain points.",
+              "role": "system"
+            },
+            {
+              "content": "=Analyze these enterprise storage articles and identify:\n1. Most painful client issues/challenges mentioned\n2. Key trends\n3. Common themes\n4. Consise Summary\n\nResearch Subject: {{ $json.researchSubject }}\nMessaging Focus: {{ $json.messagingFocus }}\nTotal Articles: {{ $json.totalArticles }}\n\n{{ $json.articlesText }}\n\n\nPlease provide your response in the following JSON format:\n{\n  \"painPoints\": [\n    {\"issue\": \"description of pain point 1\", \"frequency\": \"how often mentioned\"},\n    {\"issue\": \"description of pain point 2\", \"frequency\": \"how often mentioned\"}\n  ],\n  \"keyTrends\": [\"trend 1\", \"trend 2\", \"trend 3\"],\n  \"commonThemes\": [\"theme 1\", \"theme 2\", \"theme 3\"],\n  \"summary\": \"2-3 sentence overview of the main findings\"\n}\n\nReturn ONLY valid JSON, **No additional text or markdown formatting.**"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1700,
+        860
+      ],
+      "id": "175f27ca-18eb-41a4-b14a-a0a2fde27e39",
+      "name": "Summarize articles & identify pain points",
+      "credentials": {
+        "openAiApi": {
+          "id": "eCHfetHriLLotBZl",
+          "name": "Open router n8n setup"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Prepare data for carousel creation agent\nconst painPointsData = $('Summarize articles & identify pain points').first().json;\nconst formData = $('On form submission').first().json;\nconst articles = $('Artical by Date').all();\n\n// Get first 5 articles for reference\nconst topArticles = articles.slice(0, 5).map(item => ({\n  title: item.json.title,\n  description: item.json.description,\n  link: item.json.link\n}));\n\nreturn [{\n  json: {\n    researchSubject: formData['Research Subject'],\n    messagingFocus: formData['Messaging Focus'],\n    painPoints: painPointsData.painPoints || painPointsData,\n    keyTrends: painPointsData.keyTrends || [],\n    summary: painPointsData.summary || '',\n    topArticles: topArticles,\n    totalArticles: articles.length\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        820,
+        1200
+      ],
+      "id": "e793b15c-b000-4fe4-baa6-db205e1790c9",
+      "name": "Prepare Carousel Data"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "meta-llama/llama-3-8b-instruct",
+          "mode": "id"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are an expert LinkedIn marketing strategist specializing in B2B enterprise technology content. You create engaging carousel posts that drive engagement and conversions.",
+              "role": "system"
+            },
+            {
+              "content": "=Create a LinkedIn carousel post strategy based on this research:\n\nResearch Subject: {{ $json.researchSubject }}\nMessaging Focus: {{ $json.messagingFocus }}\n\nPain Points Identified:\n{{ JSON.stringify($json.painPoints, null, 2) }}\n\nKey Trends:\n{{ JSON.stringify($json.keyTrends, null, 2) }}\n\nSummary:\n{{ $json.summary }}\n\nTop Articles:\n{{ JSON.stringify($json.topArticles, null, 2) }}\n\nCreate a 5-slide LinkedIn carousel with the following structure:\n\nSlide 1: Hook - Grab attention with the biggest pain point\nSlide 2: Problem amplification - Why this matters now\nSlide 3: Key insight/trend - What the data shows\nSlide 4: Solution direction - How to address this\nSlide 5: Call-to-action - Engage with audience\n\nFor each slide provide:\n- Headline (max 60 characters)\n- Body text (2-3 bullet points or 1-2 short paragraphs)\n- Visual description (what the slide should look like)\n- Design style (minimal/bold/data-driven)\n\nAlso define:\n- Carousel Concept: Overall theme/angle\n- ICP (Ideal Customer Profile): Who this targets\n- Post Caption: LinkedIn post text (100-150 words)\n\nReturn ONLY valid JSON in this exact format:\n{\n  \"carouselConcept\": \"string\",\n  \"icp\": \"string\",\n  \"postCaption\": \"string\",\n  \"slides\": [\n    {\n      \"slideNumber\": 1,\n      \"headline\": \"string\",\n      \"bodyText\": \"string\",\n      \"visualDescription\": \"string\",\n      \"designStyle\": \"minimal/bold/data-driven\"\n    }\n  ]\n}\n\nReturn ONLY the JSON object, \nCRITICAL : no markdown formatting or additional text."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1100,
+        1200
+      ],
+      "id": "7d00d2a4-97a4-4f9f-a6d5-2521f0b9503e",
+      "name": "Create Carousel Content Strategy",
+      "credentials": {
+        "openAiApi": {
+          "id": "eCHfetHriLLotBZl",
+          "name": "Open router n8n setup"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse the AI response and split into individual slides\nconst aiResponse = $input.first().json.message?.content || $input.first().json.text || JSON.stringify($input.first().json);\n\nlet carouselData;\ntry {\n  // Try to parse if it's a string\n  carouselData = typeof aiResponse === 'string' ? JSON.parse(aiResponse) : aiResponse;\n} catch (e) {\n  // Try to extract JSON from markdown\n  const jsonMatch = aiResponse.match(/\\{[\\s\\S]*\\}/);\n  if (jsonMatch) {\n    carouselData = JSON.parse(jsonMatch[0]);\n  } else {\n    throw new Error('Could not parse carousel data');\n  }\n}\n\nconsole.log('Carousel Concept:', carouselData.carouselConcept);\nconsole.log('ICP:', carouselData.icp);\nconsole.log('Total Slides:', carouselData.slides.length);\n\n// Create output items - one for each slide\nconst outputItems = carouselData.slides.map(slide => ({\n  json: {\n    ...slide,\n    carouselConcept: carouselData.carouselConcept,\n    icp: carouselData.icp,\n    postCaption: carouselData.postCaption,\n    totalSlides: carouselData.slides.length\n  }\n}));\n\nreturn outputItems;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1540,
+        1200
+      ],
+      "id": "2ddc1ea3-6d96-4f96-8f95-15e945da6d36",
+      "name": "Split Into Individual Slides"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Get slide data\nconst slideData = $input.item.json;\n\n// ADD YOUR LOGO URL HERE 👇\nconst logoUrl = 'https://i.ibb.co/WmG4cRC/image-modified.png';\n\n// Enhanced color schemes with gradients\nconst colorSchemes = {\n  minimal: {\n    bg: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',\n    primary: '#FFFFFF',\n    secondary: 'rgba(255, 255, 255, 0.9)',\n    accent: '#FFD700',\n    cardBg: 'rgba(255, 255, 255, 0.1)',\n    shadow: 'rgba(0, 0, 0, 0.3)'\n  },\n  bold: {\n    bg: 'linear-gradient(135deg, #0A66C2 0%, #004182 100%)',\n    primary: '#FFFFFF',\n    secondary: 'rgba(255, 255, 255, 0.95)',\n    accent: '#FFD028',\n    cardBg: 'rgba(255, 255, 255, 0.15)',\n    shadow: 'rgba(0, 0, 0, 0.4)'\n  },\n  'data-driven': {\n    bg: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',\n    primary: '#FFFFFF',\n    secondary: 'rgba(255, 255, 255, 0.9)',\n    accent: '#00D9FF',\n    cardBg: 'rgba(255, 255, 255, 0.12)',\n    shadow: 'rgba(0, 0, 0, 0.35)'\n  },\n  modern: {\n    bg: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',\n    primary: '#FFFFFF',\n    secondary: 'rgba(255, 255, 255, 0.9)',\n    accent: '#FF6B6B',\n    cardBg: 'rgba(255, 255, 255, 0.1)',\n    shadow: 'rgba(0, 0, 0, 0.3)'\n  },\n  dark: {\n    bg: 'linear-gradient(135deg, #232526 0%, #414345 100%)',\n    primary: '#FFFFFF',\n    secondary: 'rgba(255, 255, 255, 0.85)',\n    accent: '#00F5A0',\n    cardBg: 'rgba(255, 255, 255, 0.08)',\n    shadow: 'rgba(0, 0, 0, 0.5)'\n  }\n};\n\nconst colors = colorSchemes[slideData.designStyle] || colorSchemes.bold;\nconst isLastSlide = slideData.slideNumber === slideData.totalSlides;\n\n// Format body text with proper bullets if it contains line breaks\nlet formattedBodyText = slideData.bodyText || '';\nconst hasMultipleLines = formattedBodyText.includes('\\n');\n\nif (hasMultipleLines) {\n  const lines = formattedBodyText.split('\\n').filter(line => line.trim());\n  formattedBodyText = lines.map(line => `• ${line.trim()}`).join('\\n');\n}\n\n// Build enhanced HTML\nconst htmlContent = `<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Slide ${slideData.slideNumber}</title>\n  <style>\n    * {\n      margin: 0;\n      padding: 0;\n      box-sizing: border-box;\n    }\n    \n    body {\n      width: 1080px;\n      height: 1080px;\n      background: ${colors.bg};\n      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      position: relative;\n      overflow: hidden;\n    }\n    \n    .slide-number {\n      position: absolute;\n      top: 30px;\n      right: 30px;\n      background: ${colors.cardBg};\n      backdrop-filter: blur(10px);\n      color: ${colors.primary};\n      padding: 8px 16px;\n      border-radius: 20px;\n      font-size: 16px;\n      font-weight: 600;\n      box-shadow: 0 4px 15px ${colors.shadow};\n      z-index: 10;\n    }\n    \n    .cta-badge {\n      position: absolute;\n      top: 30px;\n      left: 30px;\n      background: ${colors.accent};\n      color: #000;\n      padding: 10px 24px;\n      border-radius: 25px;\n      font-size: 18px;\n      font-weight: 700;\n      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);\n      z-index: 10;\n      display: flex;\n      align-items: center;\n      gap: 8px;\n    }\n    \n    .container {\n      max-width: 900px;\n      width: 90%;\n      background: ${colors.cardBg};\n      backdrop-filter: blur(20px);\n      border-radius: 30px;\n      padding: 60px;\n      box-shadow: 0 20px 60px ${colors.shadow};\n      border: 2px solid rgba(255, 255, 255, 0.2);\n      text-align: center;\n    }\n    \n    .headline {\n      font-size: 68px;\n      font-weight: 800;\n      color: ${colors.primary};\n      line-height: 1.2;\n      margin-bottom: 20px;\n      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);\n    }\n    \n    .accent-line {\n      width: 120px;\n      height: 5px;\n      background: ${colors.accent};\n      margin: 0 auto 40px;\n      border-radius: 3px;\n    }\n    \n    .body-text {\n      font-size: 26px;\n      color: ${colors.secondary};\n      line-height: 1.6;\n      white-space: pre-line;\n      text-align: ${hasMultipleLines ? 'left' : 'center'};\n      max-width: 750px;\n      margin: 0 auto;\n    }\n    \n    /* Logo positioned OUTSIDE the container */\n    .logo-wrapper {\n      position: absolute;\n      bottom: 40px;\n      right: 40px;\n      z-index: 20;\n    }\n    \n    .logo {\n      width: 100px;\n      height: 100px;\n      background: white;\n      border-radius: 50%;\n      padding: 15px;\n      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);\n      border: 3px solid rgba(255, 255, 255, 0.3);\n    }\n    \n    .logo img {\n      width: 100%;\n      height: 100%;\n      object-fit: contain;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"slide-number\">${slideData.slideNumber}/${slideData.totalSlides}</div>\n  \n  ${isLastSlide ? `\n  <div class=\"cta-badge\">\n    <span>👇 CTA</span>\n  </div>\n  ` : ''}\n  \n  <div class=\"container\">\n    <h1 class=\"headline\">${slideData.headline || 'Untitled'}</h1>\n    <div class=\"accent-line\"></div>\n    <p class=\"body-text\">${formattedBodyText}</p>\n  </div>\n  \n  <!-- Logo outside container -->\n  <div class=\"logo-wrapper\">\n    <div class=\"logo\">\n      <img src=\"${logoUrl}\" alt=\"Logo\">\n    </div>\n  </div>\n</body>\n</html>`;\n\n// Validate HTML completion\nlet finalHtml = htmlContent;\nif (!htmlContent.endsWith('</html>')) {\n  console.log('WARNING: HTML was incomplete, fixing...');\n  finalHtml += '\\n</body>\\n</html>';\n}\n\nreturn {\n  json: {\n    slideNumber: slideData.slideNumber,\n    headline: slideData.headline,\n    bodyText: slideData.bodyText,\n    designStyle: slideData.designStyle,\n    html: finalHtml,\n    htmlLength: finalHtml.length,\n    fileName: `slide_${slideData.slideNumber}.png`,\n    carouselConcept: slideData.carouselConcept,\n    icp: slideData.icp,\n    postCaption: slideData.postCaption\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1820,
+        1200
+      ],
+      "id": "8df51a2e-ae5d-4ba7-b59b-63b8a5fa7049",
+      "name": "Generate HTML for Slide1"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "html",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        500,
+        1520
+      ],
+      "id": "e5f49975-0a8a-454e-89b9-ab26359cfed6",
+      "name": "Split Out2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://hcti.io/v1/image",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBasicAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"html\": {{ JSON.stringify($json.html) }},\n  \"css\": \"\",\n  \"google_fonts\": \"Roboto\",\n  \"viewport_width\": 1080,\n  \"viewport_height\": 1080,\n  \"device_scale\": 2\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        860,
+        1520
+      ],
+      "id": "e17f0699-a912-4767-bd78-00786b012b23",
+      "name": "Convert HTML to Image",
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "aCKCvratzBMcKqiV",
+          "name": "Azeema html to image"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.linkedin.com/rest/documents?action=initializeUpload",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "linkedInOAuth2Api",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "LinkedIn-Version",
+              "value": "202307"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"initializeUploadRequest\": {\n        \"owner\": \"urn:li:person:{{ $json.sub }}\"\n  }\n}",
+        "options": {}
+      },
+      "id": "1fd40ac6-f510-438b-aa2d-0927240a77ce",
+      "name": "Get Upload URL",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        500,
+        1860
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "linkedInOAuth2Api": {
+          "id": "f4HTdzcJ6FruRpK0",
+          "name": "LinkedIn account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "={{ $json.value.uploadUrl }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "linkedInOAuth2Api",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "=corousel.pdf",
+        "options": {}
+      },
+      "id": "938109eb-5b1f-47a8-aae4-facba1b0ea6a",
+      "name": "Upload PDF",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1040,
+        1860
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "linkedInOAuth2Api": {
+          "id": "f4HTdzcJ6FruRpK0",
+          "name": "LinkedIn account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Image to PDF').item.json.url }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "corousel.pdf"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        760,
+        1860
+      ],
+      "id": "1a74b972-1888-4a48-82b7-b16c728d0ddd",
+      "name": "download pdf"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.linkedin.com/rest/posts",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "linkedInOAuth2Api",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "LinkedIn-Version",
+              "value": "202411"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"author\": \"urn:li:person:{{ $('LinkedIn user URN').item.json.sub }}\",\n  \"commentary\": \"Hello\",\n  \"visibility\": \"PUBLIC\",\n  \"distribution\": {\n    \"feedDistribution\": \"MAIN_FEED\",\n    \"targetEntities\": [],\n    \"thirdPartyDistributionChannels\": []\n  },\n  \"content\": {\n    \"media\": {\n      \"title\": \"Happy\",\n      \"id\": \"{{ $('Get Upload URL').item.json.value.document }}\"\n    }\n  },\n  \"lifecycleState\": \"PUBLISHED\",\n  \"isReshareDisabledByAuthor\": false\n}",
+        "options": {}
+      },
+      "id": "d39aaa65-e9a5-4b6d-b736-c41d79de9620",
+      "name": "Post to LinkedIn",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1360,
+        1860
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "linkedInOAuth2Api": {
+          "id": "f4HTdzcJ6FruRpK0",
+          "name": "LinkedIn account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pdf.co/v1/pdf/convert/from/image",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "uzmakhatun9303@gmail.com_fpF4NYPFB1WXsdAL8ZcPWMPguGeq4qOFZKGsMzxH75zQPz0UBZP0Ei3Lsoq9wouF"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"url\": \"{{ $json.data[0].url }},{{ $json.data[1].url }},{{ $json.data[2].url }},{{ $json.data[3].url }},{{ $json.data[4].url }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1500,
+        1520
+      ],
+      "id": "820ddc41-035e-4c10-827f-0393091a6371",
+      "name": "Image to PDF"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        1520
+      ],
+      "id": "a20a0e78-2167-4d98-8cde-98424358fad4",
+      "name": "Aggregate2"
+    },
+    {
+      "parameters": {
+        "url": "https://api.linkedin.com/v2/userinfo",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "linkedInOAuth2Api",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1800,
+        1520
+      ],
+      "id": "fa29b2d9-3835-44b0-9803-7565106413f2",
+      "name": "LinkedIn user URN",
+      "credentials": {
+        "linkedInOAuth2Api": {
+          "id": "f4HTdzcJ6FruRpK0",
+          "name": "LinkedIn account 2"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "RSS feed",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS feed1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS feed2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS feed3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS feed4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS feed5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS feed6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS feed7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS feed8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS feed9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS feed": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS feed1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "RSS feed2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "RSS feed3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "RSS feed4": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "RSS feed5": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "RSS feed6": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "RSS feed7": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "RSS feed8": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 8
+          }
+        ]
+      ]
+    },
+    "RSS feed9": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 9
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Artical by Date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Combine Articals": {
+      "main": [
+        [
+          {
+            "node": "Summarize articles & identify pain points",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Artical by Date": {
+      "main": [
+        [
+          {
+            "node": "Combine Articals",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summarize articles & identify pain points": {
+      "main": [
+        [
+          {
+            "node": "Prepare Carousel Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Carousel Data": {
+      "main": [
+        [
+          {
+            "node": "Create Carousel Content Strategy",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Carousel Content Strategy": {
+      "main": [
+        [
+          {
+            "node": "Split Into Individual Slides",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Into Individual Slides": {
+      "main": [
+        [
+          {
+            "node": "Generate HTML for Slide1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate HTML for Slide1": {
+      "main": [
+        [
+          {
+            "node": "Split Out2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out2": {
+      "main": [
+        [
+          {
+            "node": "Convert HTML to Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert HTML to Image": {
+      "main": [
+        [
+          {
+            "node": "Aggregate2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Upload URL": {
+      "main": [
+        [
+          {
+            "node": "download pdf",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload PDF": {
+      "main": [
+        [
+          {
+            "node": "Post to LinkedIn",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "download pdf": {
+      "main": [
+        [
+          {
+            "node": "Upload PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image to PDF": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn user URN",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate2": {
+      "main": [
+        [
+          {
+            "node": "Image to PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn user URN": {
+      "main": [
+        [
+          {
+            "node": "Get Upload URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1967b0e731f50dfad1861de4a184b3a04bf42a63c845fbbd27d630b2fa20290f"
+  }
+}
